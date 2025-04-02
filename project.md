@@ -3,11 +3,11 @@
 O API Middleware Hub é uma aplicação intermediária que facilita a integração entre sistemas distintos, oferecendo transformação de dados, autenticação avançada e roteamento configurável. Este projeto foi desenvolvido como parte da disciplina de Desenvolvimento de Software, seguindo uma abordagem ágil com entregas iterativas.
 
 🔗 Links Importantes
-Repositório de Código: github.com/seu-usuario/api-middleware-hub
+Repositório de Código: https://github.com/allanpradella/api-middleware-hub
 
-Quadro de Acompanhamento: Trello/Quadro-do-Projeto
+Quadro de Acompanhamento: https://trello.com/w/apimiddlewarehub
 
-Vídeo Demonstração: Link para o vídeo
+Vídeo Demonstração: 
 
 🎯 Objetivos
 Objetivos Funcionais
@@ -152,21 +152,21 @@ Resultado Esperado: Token obtido e utilizado com sucesso
 
 📅 Cronograma de Entrega
 Etapa	Descrição	Conclusão
-1	Definição do projeto e documentação inicial	DD/MM
-2	Modelagem e protótipos	DD/MM
-3	Primeira iteração funcional	DD/MM
-4	Planos de teste e refinamentos	DD/MM
-5	Segunda iteração com melhorias	DD/MM
-6	Entrega final e demonstração	DD/MM
+1	Definição do projeto e documentação inicial	01/02
+2	Modelagem e protótipos	10/02
+3	Primeira iteração funcional	18/02
+4	Planos de teste e refinamentos	02/03
+5	Segunda iteração com melhorias	15/03
+6	Entrega final e demonstração	30/05
 ✨ Equipe
-Nome Completo 1 - RM12345
+Allan Pradella Frushio - 10415355
 
-Nome Completo 2 - RM67890
+Eduardo Alexandre Rodrigues - 
 
-Nome Completo 3 - RM54321
+Felipe Jost Clavé - 
 
 📝 Licença
 Este projeto está licenciado sob a MIT License.
 
-Acesso à Aplicação: Disponível por duas semanas a partir de DD/MM/AAAA em link-de-acesso
+Acesso à Aplicação: Disponível por duas semanas a partir de 30/05/2025 em link-de-acesso
 Dúvidas: entrar em contato via Issues no repositório
