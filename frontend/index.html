@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced API Middleware</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>API Middleware Hub</h1>
+      <div class="auth-mode">
+        <label>Modo de Autenticação:</label>
+        <select id="authType">
+          <option value="none">Nenhuma</option>
+          <option value="bearer">Bearer Token</option>
+          <option value="oauth2">OAuth 2.0</option>
+          <option value="basic">Basic Auth</option>
+        </select>
+      </div>
+    </header>
+
+    <div class="grid-container">
+      <!-- Seção de Origem -->
+      <div class="card source-config">
+        <h2>Configuração de Origem</h2>
+        <div class="form-group">
+          <label>Método HTTP:</label>
+          <select id="method" class="select2">
+            <option value="GET">GET</option>
+            <option value="POST">POST</option>
+            <option value="PUT">PUT</option>
+            <option value="DELETE">DELETE</option>
+            <option value="PATCH">PATCH</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label>URL de Origem:</label>
+          <input type="text" id="sourceUrl" placeholder="https://api.example.com/data">
+        </div>
+        
+        <div class="form-group">
+          <label>Headers Customizados:</label>
+          <div id="customHeaders">
+            <div class="header-row">
+              <input type="text" placeholder="Chave" class="header-key">
+              <input type="text" placeholder="Valor" class="header-value">
+              <button class="remove-header">×</button>
+            </div>
+          </div>
+          <button id="addHeader">+ Adicionar Header</button>
+        </div>
+        
+        <div class="form-group">
+          <label>Corpo da Requisição:</label>
+          <textarea id="requestBody" placeholder="{ \"key\": \"value\" }"></textarea>
+        </div>
+        
+        <button id="fetchBtn" class="btn-primary">Buscar Dados</button>
+      </div>
+
+      <!-- Seção de Autenticação (dinâmica) -->
+      <div class="card auth-config" id="authConfigSection">
+        <!-- Preenchido dinamicamente via JavaScript -->
+      </div>
+
+      <!-- Seção de Resposta -->
+      <div class="card response-view">
+        <h2>Resposta da API</h2>
+        <div class="auto-mode">
+          <label class="switch">
+            <input type="checkbox" id="autoMode">
+            <span class="slider"></span>
+          </label>
+          <span>Modo Automático</span>
+        </div>
+        <pre id="responseOutput">{}</pre>
+      </div>
+
+      <!-- Seção de Mapeamento -->
+      <div class="card mapping-section">
+        <h2>Mapeamento de Variáveis</h2>
+        <div id="variableFields" class="variable-container"></div>
+      </div>
+
+      <!-- Seção de Destino -->
+      <div class="card destination-config">
+        <h2>Configuração de Destino</h2>
+        <div class="form-group">
+          <label>URL de Destino:</label>
+          <input type="text" id="destinationUrl" placeholder="https://api.destino.com/endpoint">
+        </div>
+        
+        <div class="form-group">
+          <label>Método HTTP:</label>
+          <select id="destMethod" class="select2">
+            <option value="POST">POST</option>
+            <option value="PUT">PUT</option>
+            <option value="PATCH">PATCH</option>
+          </select>
+        </div>
+        
+        <button id="sendBtn" class="btn-primary">Enviar para Destino</button>
+        <button id="saveFlow" class="btn-secondary">Salvar Fluxo</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal para OAuth 2.0 -->
+  <div id="oauthModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Configuração OAuth 2.0</h3>
+      <div id="oauthForm"></div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  <script src="auth-config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
