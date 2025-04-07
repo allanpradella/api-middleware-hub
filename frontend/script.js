@@ -261,3 +261,5 @@ function showNotification(message, type = 'success') {
     setTimeout(() => notification.remove(), 500);
   }, 3000);
 }
+
+// REVISAR TUDO NO JS

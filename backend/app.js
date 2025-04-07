@@ -35,3 +35,5 @@ app.post('/api/send', (req, res) => {
 
 const PORT = 3001;
 app.listen(PORT, () => console.log(`Backend rodando em http://localhost:${PORT}`));
+
+// REVISAR O APP JS TAMBÉM
